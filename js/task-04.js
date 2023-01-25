@@ -13,19 +13,21 @@
 const removeQuantityBtn = document.querySelector('[data-action="decrement"]');
 const addQuantityBtn = document.querySelector('[data-action="increment"]');
 
-let counterValue = 0;
 
-const onButtonTargetClickRemove = (counterValue) => {
-  counterValue -= 1;
-  return `<span id="value">${counterValue}</span>`;
-};
-console.log(onButtonTargetClickRemove);
 
-const onButtonTargetClickAdd = (counterValue) => {
-  return (counterValue += 1);
-};
 
 removeQuantityBtn.addEventListener("click", onButtonTargetClickRemove);
 addQuantityBtn.addEventListener("click", onButtonTargetClickAdd);
 
-removeQuantityBtn.insertAdjacentHTML("afterbegin", onButtonTargetClickRemove);
+const onButtonTargetClickRemove  () {
+	let counterValue = 0;
+	return counterValue -= 1
+}
+
+console.log(onButtonTargetClickRemove);
+
+
+
+
+// removeQuantityBtn.insertAdjacentHTML("afterbegin", onButtonTargetClickRemove);
+// return `<span id="value">${counterValue}</span>`;
