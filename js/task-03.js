@@ -22,7 +22,7 @@ const images = [
 ];
 const gallery = document.querySelector("ul");
 
-// 1 метод через createElement
+//! 1 метод через createElement
 
 // const makeGallery = ({ url, alt }) => {
 //   const imgLi = document.createElement("li");
@@ -36,12 +36,11 @@ const gallery = document.querySelector("ul");
 // const elements = images.map(makeGallery);
 // gallery.append(...elements);
 
-// 2 метод через шаблонные строки
+//! 2 метод через шаблонные строки
 const makePicture = ({ url, alt }) => {
   return `<li><img src=${url} alt=${alt} width=400></img></li>`;
 };
 
 const makeGallery = images.map(makePicture).join("");
-console.log(makeGallery);
 
 gallery.insertAdjacentHTML("afterbegin", makeGallery);
